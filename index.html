@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Africa in AI | Centering African Realities in AI</title>
+    <meta name="description" content="An initiative to expose and challenge the underrepresentation of African data, languages, and cultural contexts in Artificial Intelligence.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #FAFAFA;
+            color: #1A1A1A;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Colors for Tailwind */
+        .bg-primary { background-color: #1A1A1A; }
+        .text-primary { color: #1A1A1A; }
+        .bg-accent-gold { background-color: #F4B400; }
+        .text-accent-gold { color: #F4B400; }
+        .bg-accent-teal { background-color: #00796B; }
+        .text-accent-teal { color: #00796B; }
+        .bg-accent-yellow { background-color: #FDD835; }
+        .text-accent-yellow { color: #FDD835; }
+        .bg-light-gray { background-color: #FAFAFA; }
+
+        /* Hero Background Pattern */
+        .hero-bg {
+            background-color: #1A1A1A;
+            background-image: 
+                radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+        
+        /* Bar Chart Animation */
+        .bar {
+            transition: width 1.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="bg-primary/80 backdrop-blur-sm text-white sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold tracking-wider">Africa in AI</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#problem" class="hover:text-accent-gold transition-colors">The Problem</a>
+                <a href="#mission" class="hover:text-accent-gold transition-colors">Our Mission</a>
+                <a href="#audits" class="hover:text-accent-gold transition-colors">Audits</a>
+                <a href="#resources" class="hover:text-accent-gold transition-colors">Resources</a>
+                <a href="#action" class="bg-accent-gold text-primary font-bold py-2 px-4 rounded-md hover:bg-accent-yellow transition-colors">Get Involved</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col space-y-4">
+            <a href="#problem" class="hover:text-accent-gold transition-colors">The Problem</a>
+            <a href="#mission" class="hover:text-accent-gold transition-colors">Our Mission</a>
+            <a href="#audits" class="hover:text-accent-gold transition-colors">Audits</a>
+            <a href="#resources" class="hover:text-accent-gold transition-colors">Resources</a>
+            <a href="#action" class="bg-accent-gold text-primary font-bold py-2 px-4 rounded-md hover:bg-accent-yellow transition-colors text-center">Get Involved</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg text-white min-h-screen flex items-center justify-center text-center p-6">
+            <div class="max-w-4xl">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-4">Africa in AI</h1>
+                <h2 class="text-xl md:text-2xl text-accent-teal font-medium mb-8">Centering African Realities in the Age of Artificial Intelligence</h2>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#problem" class="bg-accent-gold text-primary font-bold py-3 px-8 rounded-md text-lg hover:bg-accent-yellow transition-colors">Learn the Problem</a>
+                    <a href="#action" class="bg-transparent border-2 border-accent-gold text-accent-gold font-bold py-3 px-8 rounded-md text-lg hover:bg-accent-gold hover:text-primary transition-colors">Get Involved</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Problem Section -->
+        <section id="problem" class="py-20 md:py-32 bg-light-gray">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                    <div class="text-left">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6 text-accent-teal">The Data Divide</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            Today’s artificial intelligence is built on an illusion of being global. In reality, large language and vision models are trained on internet-scale datasets that reflect a single corner of the world.
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            They speak our languages poorly, fail to see our faces, and misunderstand our contexts. This is not a data gap—it is a form of **digital erasure**, reinforcing Western norms as a universal default and leaving a continent of 1.4 billion people behind.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-center mb-6">Dataset Origin in Major LLMs</h3>
+                        <div class="space-y-4 p-4 bg-white rounded-lg shadow-md">
+                            <div class="w-full">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-base font-medium text-gray-700">North America</span>
+                                    <span class="text-sm font-medium text-gray-700">~60%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4">
+                                    <div class="bg-accent-teal h-4 rounded-full bar" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-base font-medium text-gray-700">Europe</span>
+                                    <span class="text-sm font-medium text-gray-700">~25%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4">
+                                    <div class="bg-accent-teal h-4 rounded-full bar" style="width: 25%;"></div>
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-base font-medium text-gray-700">Asia</span>
+                                    <span class="text-sm font-medium text-gray-700">~12%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4">
+                                    <div class="bg-accent-teal h-4 rounded-full bar" style="width: 12%;"></div>
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-base font-medium text-accent-gold">Africa</span>
+                                    <span class="text-sm font-medium text-accent-gold">&lt;1%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-4">
+                                    <div class="bg-accent-yellow h-4 rounded-full bar" style="width: 1%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Mission Section -->
+        <section id="mission" class="py-20 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-16">Our Mission</h2>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-accent-teal/10 p-5 rounded-full mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-accent-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 10l-3 3m0 0l3 3m-3-3h12" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Audit & Expose</h3>
+                        <p class="text-gray-600 leading-relaxed">We conduct rigorous audits of major AI models and datasets to document the systemic exclusion of African data, providing undeniable evidence of the digital divide.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-accent-gold/10 p-5 rounded-full mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-accent-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Promote Data Sovereignty</h3>
+                        <p class="text-gray-600 leading-relaxed">We advocate for new standards in data collection and model development that prioritize data sovereignty, ethical inclusion, and benefit-sharing for African communities.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                         <div class="bg-primary/10 p-5 rounded-full mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Build Awareness</h3>
+                        <p class="text-gray-600 leading-relaxed">We connect researchers, policymakers, and technologists with the resources, datasets, and partners needed to build a more equitable and representative AI ecosystem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Audits & Visuals Section -->
+        <section id="audits" class="py-20 md:py-24 bg-light-gray">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold">Audits & Visuals</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">Evidence of exclusion. We provide concrete data on how and where Africa is left out of the AI revolution.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-bold mb-3">Language Model Audit</h3>
+                        <p class="text-gray-600 mb-6">An in-depth analysis of language representation in models like GPT-4 and LLaMA, highlighting the near-total absence of 2,000+ African languages.</p>
+                        <a href="#" class="font-bold text-accent-teal hover:underline">Download Report (PDF) &rarr;</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-bold mb-3">Facial Recognition Bias</h3>
+                        <p class="text-gray-600 mb-6">A case study on the dangerously high error rates of popular facial recognition systems when identifying Black and African faces.</p>
+                        <a href="#" class="font-bold text-accent-teal hover:underline">Read Case Study &rarr;</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl font-bold mb-3">Geographic Data Map</h3>
+                        <p class="text-gray-600 mb-6">An interactive visualization showing the stark geographic imbalance in large-scale image datasets like LAION-5B.</p>
+                        <a href="#" class="font-bold text-accent-teal hover:underline">Explore Interactive Map &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="py-20 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold">Resources</h2>
+                    <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">A curated list of datasets, tools, and research to support data equity and African-led AI development.</p>
+                </div>
+                <div class="max-w-4xl mx-auto">
+                    <div class="divide-y divide-gray-200">
+                        <div class="py-6">
+                            <h3 class="text-xl font-bold mb-2">Masakhane</h3>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="bg-accent-teal/10 text-accent-teal text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">NLP</span>
+                                <span class="bg-accent-teal/10 text-accent-teal text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Community</span>
+                            </div>
+                            <p class="text-gray-600 mb-3">A grassroots research community to strengthen and spur NLP research in African languages, for Africans, by Africans.</p>
+                            <a href="https://www.masakhane.io/" target="_blank" rel="noopener noreferrer" class="font-bold text-accent-gold hover:underline">Visit Resource &rarr;</a>
+                        </div>
+                        <div class="py-6">
+                            <h3 class="text-xl font-bold mb-2">Lacuna Fund</h3>
+                             <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="bg-primary/10 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Funding</span>
+                                <span class="bg-primary/10 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Datasets</span>
+                            </div>
+                            <p class="text-gray-600 mb-3">The world's first collaborative effort to fund the creation of open, accessible, and representative datasets for machine learning.</p>
+                            <a href="https://lacunafund.org/" target="_blank" rel="noopener noreferrer" class="font-bold text-accent-gold hover:underline">Visit Resource &rarr;</a>
+                        </div>
+                        <div class="py-6">
+                            <h3 class="text-xl font-bold mb-2">Zindi Africa</h3>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="bg-accent-yellow/40 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Data Science</span>
+                                <span class="bg-accent-yellow/40 text-primary text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Competition</span>
+                            </div>
+                            <p class="text-gray-600 mb-3">The largest community of data scientists in Africa, dedicated to solving the continent's most pressing problems through machine learning.</p>
+                            <a href="https://zindi.africa/" target="_blank" rel="noopener noreferrer" class="font-bold text-accent-gold hover:underline">Visit Resource &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Take Action Section -->
+        <section id="action" class="py-20 md:py-32 bg-primary text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Take Action</h2>
+                <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-12">Whether you are a researcher, a policymaker, or a global citizen, you have a role to play in demanding and building a more just digital future.</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-3 text-accent-gold">For Researchers</h3>
+                        <p class="text-gray-300 mb-6">Help us build a more equitable AI. Use our auditing tools, contribute to Africa-centric datasets, or partner with us.</p>
+                        <a href="#contact" class="bg-white text-primary font-bold py-3 px-6 rounded-md hover:bg-gray-200 transition-colors">Submit a Dataset</a>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-3 text-accent-gold">For Policymakers</h3>
+                        <p class="text-gray-300 mb-6">Advocate for policies that promote digital sovereignty and fair representation. Sign our pledge for Ethical AI Data Procurement.</p>
+                        <a href="#contact" class="bg-white text-primary font-bold py-3 px-6 rounded-md hover:bg-gray-200 transition-colors">Request a Briefing</a>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-3 text-accent-gold">For Citizens</h3>
+                        <p class="text-gray-300 mb-6">The most powerful tool is your voice. Share our findings, support organizations on the ground, and demand better from tech.</p>
+                        <a href="https://twitter.com/intent/tweet?text=AI%20is%20failing%20Africa.%20It's%20time%20to%20challenge%20the%20digital%20erasure%20of%20a%20continent.%20Learn%20more%20at%20[your-domain].org%20%23AfricaInAI" target="_blank" rel="noopener noreferrer" class="bg-white text-primary font-bold py-3 px-6 rounded-md hover:bg-gray-200 transition-colors">Share the Mission</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Contact Section -->
+        <section id="about" class="py-20 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-5 gap-12 md:gap-16">
+                    <div class="md:col-span-2 text-center md:text-left">
+                        <img src="https://placehold.co/400x400/1A1A1A/FAFAFA?text=Founder" alt="Founder of Africa in AI" class="w-48 h-48 rounded-full mx-auto md:mx-0 mb-6 object-cover">
+                        <h3 class="text-3xl font-bold mb-4">About the Initiative</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Our story began with a simple question: "Where is Africa in AI?" This platform is the answer—a dedicated effort to write our continent back into the digital narrative, ensuring that the future of intelligence is built by and for all of humanity.
+                        </p>
+                    </div>
+                    <div class="md:col-span-3">
+                        <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
+                        <form action="#" method="POST">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-gold" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-gold" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent-gold" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-accent-gold text-primary font-bold py-3 px-8 rounded-md text-lg hover:bg-accent-yellow transition-colors">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#problem" class="hover:text-accent-gold">The Problem</a></li>
+                        <li><a href="#mission" class="hover:text-accent-gold">Our Mission</a></li>
+                        <li><a href="#resources" class="hover:text-accent-gold">Resources</a></li>
+                        <li><a href="#action" class="hover:text-accent-gold">Take Action</a></li>
+                    </ul>
+                </div>
+                <div class="flex items-center justify-center">
+                    <p class="text-lg italic text-gray-400">“Representation begins with recognition.”</p>
+                </div>
+                <div class="text-center md:text-right">
+                     <h4 class="font-bold text-lg mb-4">Follow Us</h4>
+                     <div class="flex justify-center md:justify-end space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"></path></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19,3H5C3.89,3 3,3.89 3,5V19C3,20.1 3.9,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.89 20.1,3 19,3M8.5,18H6V9H8.5V18M18,18H15.5V13.5C15.5,12.57 15.17,12.17 14.65,12.17C14.06,12.17 13.5,12.64 13.5,13.5V18H11V9H13.5V10.4C13.93,9.56 14.86,9 16.1,9C17.8,9 18,10.2 18,11.5V18Z"></path></svg></a>
+                     </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500">
+                <p>&copy; 2025 Africa in AI. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Animate bars on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.bar').forEach(bar => {
+                        bar.style.width = bar.dataset.width;
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const problemSection = document.getElementById('problem');
+        if (problemSection) {
+            // Set data-width from style attribute to be used by observer
+            problemSection.querySelectorAll('.bar').forEach(bar => {
+                bar.dataset.width = bar.style.width;
+                bar.style.width = '0%'; // Start with 0 width
+            });
+            observer.observe(problemSection);
+        }
+    </script>
+
+</body>
+</html>
